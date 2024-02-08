@@ -5,7 +5,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-            #    - name: "Write multi line commands"
+    - name: "Write multi line commands"
       run:  |
         echo "Deploying to production server on branch $GITHUB_REF"
         echo "GITHUB_EVENT_NAME $GITHUB_EVENT_NAME"
