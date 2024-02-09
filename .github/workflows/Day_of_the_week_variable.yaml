@@ -1,8 +1,11 @@
+name: Env and Context
+on: push
 env:
     DAY_OF_WEEK: Monday
   
   jobs:
     greeting_job:
+      name: Greeting Job  
       runs-on: ubuntu-latest
       env:
         Greeting: Hello
