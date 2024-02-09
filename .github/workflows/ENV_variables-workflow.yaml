@@ -3,6 +3,7 @@ on: push
 jobs:
   ENV-variables:
     if: ${{ github.ref == 'refs/heads/main' }}
+    name: Define Variables using GITHUB_ENV
     runs-on: ubuntu-latest
     steps:
     - name: Set the value
@@ -11,4 +12,6 @@ jobs:
   
     - name: Use the value
       id: step_two
-      run: echo "${{ env.action_state }}" # This will output 'yellow'
+      run:  |
+        echo "${{ env.action_state }}" # This will output 'yellow'
+        env
