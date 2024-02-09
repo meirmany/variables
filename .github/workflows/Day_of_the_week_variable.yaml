@@ -5,6 +5,7 @@ env:
   
 jobs:
   greeting_job:
+    name: Greeting Env And Context
     runs-on: ubuntu-latest
     env:
       Greeting: Hello
